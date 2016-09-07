@@ -1,9 +1,9 @@
 package parser_test
 
 import (
+	"github.com/paulcamper/swagger/parser"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
-	"github.com/yvasiyarov/swagger/parser"
 	"go/ast"
 	"strings"
 	"testing"
@@ -17,7 +17,7 @@ type ModelSuite struct {
 
 var initialisedParser *parser.Parser
 
-const ExamplePackageName = "github.com/yvasiyarov/swagger/example"
+const ExamplePackageName = "github.com/paulcamper/swagger/example"
 
 func (suite *ModelSuite) SetupSuite() {
 	if initialisedParser == nil {

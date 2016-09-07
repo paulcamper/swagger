@@ -4,7 +4,7 @@ import (
 	"flag"
 	"log"
 
-	"github.com/yvasiyarov/swagger/generator"
+	"github.com/paulcamper/swagger/generator"
 )
 
 var apiPackage = flag.String("apiPackage", "", "The package that implements the API controllers, relative to $GOPATH/src")
@@ -35,8 +35,8 @@ func main() {
 		OutputSpec:      *outputSpec,
 		ControllerClass: *controllerClass,
 		Ignore:          *ignore,
-		ContentsTable:	 *contentsTable,
-		Models:		 *models,
+		ContentsTable:   *contentsTable,
+		Models:          *models,
 	}
 
 	err := generator.Run(params)

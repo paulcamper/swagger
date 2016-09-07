@@ -13,8 +13,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/yvasiyarov/swagger/markup"
-	"github.com/yvasiyarov/swagger/parser"
+	"github.com/paulcamper/swagger/markup"
+	"github.com/paulcamper/swagger/parser"
 )
 
 const (
@@ -125,7 +125,7 @@ func InitParser(controllerClass, ignore string) *parser.Parser {
 
 type Params struct {
 	ApiPackage, MainApiFile, OutputFormat, OutputSpec, ControllerClass, Ignore string
-	ContentsTable, Models bool
+	ContentsTable, Models                                                      bool
 }
 
 func Run(params Params) error {
@@ -140,7 +140,7 @@ func Run(params Params) error {
 	//Support gopaths with multiple directories
 	dirs := strings.Split(gopath, ":")
 	if runtime.GOOS == "windows" {
-        	dirs = strings.Split(gopath, ";")
+		dirs = strings.Split(gopath, ";")
 	}
 	found := false
 	for _, d := range dirs {
